@@ -6,7 +6,7 @@ $move = 0;
 while($move < 40){
     $count++;
 
-    $dice = rand(1,6);
+    $dice = mt_rand(1,6);
     $move += $dice;
     echo $count."回目=".$dice.'<br>';
     if($move >= 40){
@@ -24,9 +24,9 @@ date_default_timezone_set('Asia/Tokyo');
 $time = date("H", time());
 
 
-if(5 < $time && $time < 11 ){
+if(5 <= $time && $time <= 11 ){
     echo '今'.$time.'時台です。<br>おはようございます';
-} else if(11 < $time && $time < 18){
+} else if(11 < $time && $time <= 18){
     echo '今'.$time.'時台です。<br>こんにちは';
 } else {
     echo '今'.$time.'時台です。<br>こんばんは';
