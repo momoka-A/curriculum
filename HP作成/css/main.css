@@ -1,0 +1,322 @@
+/* 共通部分 */
+.title {
+  font-size: 50px;
+  margin-top: 30px;
+  font-weight: 100;
+}
+
+.small_title {
+  font-size: 12px;
+  margin-top: -10px;  
+  font-weight: 100;
+}
+
+.sub_title {  
+  font-size: 35px;
+  margin: 20px 0;
+  font-weight: 100;
+}
+
+.title_big {
+  font-size: 70px;
+}
+
+.title_small {
+  font-size: 30px;
+}
+
+.tax {
+  font-size: 0.5em;
+}
+
+/* ヘッダー */
+#header {
+  width: 1024px;
+  height: 60px;
+  margin: 0 auto;
+}
+
+.header_contents {
+  width: 1024px;
+  position: fixed;
+  top:0;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+}
+
+#header img {
+  width: 200px;
+  height: 50px;
+  margin: 5px 0 5px 20px;
+}
+
+#header ul {
+  display: flex;
+  list-style: none;
+}
+
+#header ul li{
+  margin-right: 30px;
+}
+
+#header ul li a{
+  text-decoration: none;
+  color: black; 
+}
+
+/* メイン */
+#main {
+  width: 1024px;
+  text-align: center;
+  font-weight: 100;
+  margin: 0 auto;
+}
+
+#main p {
+  font-size: 1.6em;
+}
+
+/* トップ */
+#top img {
+  width: 100%;
+}
+
+.description p {
+  margin: 50px 0;
+}
+
+/* 商品概要 */
+#about {
+  background-image: url(../images/background1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 -25px;
+  padding: 200px 0;
+}
+
+.about_contents {
+  margin: 30px 0;
+}
+
+.about_sub_contents {
+  display: flex;
+  margin: 50px 0;
+}
+
+.about_sub_contents p {
+  display: inline-block;
+  width: 50%;
+  padding: 0 50px;
+  text-align: left;
+  line-height: 3.0em;
+}
+
+.about_sub_contents img {
+  width: 50%;
+}
+
+/* FreeksFoodが選ばれる４つの理由 */
+#reason {
+  padding: 15px;
+}
+
+.reason_contents{
+  margin: 100px 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.reason_sub_contents {
+  width: 50%;
+  text-align: left;
+  margin: 20px 0;
+  padding: 0 20px;
+}
+
+.fig {
+  margin: auto;
+  width: 50%;
+}
+
+.reason_sub_title {
+  position: relative;
+  width: 100%;
+  height: 150px;
+}
+
+.reason_sub_title h3 {
+  position: absolute;
+  top: 20px;
+  z-index: 10;
+}
+
+.reason_sub_title img {
+  width: 150px;
+  position: absolute;
+  right: 180px;
+  top: 0;
+  z-index: 5;
+}
+
+.reason_contents_text {
+  height: 30%;
+  line-height: 4em;
+  padding: 20px;
+}
+
+.reason_sub_contents h4 {
+  text-align: center;
+  margin: 30px;
+}
+
+/* お客様の声 */
+#customer {
+  background-image: url(../images/background2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 -25px;
+  padding: 200px 0;
+}
+
+.customer_contents {
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.customer_voice {
+  width: 100%;
+  height: 350px;
+  position: relative;
+}
+
+.customer_text {
+  padding-left: 60px;
+  line-height: 2.5em;
+  text-align: left;
+  position: absolute;
+  z-index: 10;
+}
+
+.customer_voice img {
+  width: 450px;
+  position: absolute;
+  right: 60px;
+  top: 50px;
+}
+
+/* 商品紹介 */
+#products {
+  padding: 100px 0;
+}
+
+.products_main {
+  width: 100%;
+  margin: 50px 0;
+  display: flex;
+}
+.products_contents {
+  width: 50%;
+  margin: 50px 0;
+}
+
+.products_contents img{
+  width: 280px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.products_text {
+  width: 280px;
+  height: 230px;
+  margin: 15px auto;
+  text-align: left;
+  line-height: 2.5em;
+}
+
+.products_btn {
+  display: block;
+  width: 280px;
+  margin: 0 auto;
+  padding: 10px;
+  border: solid 1px;
+  background-color: #fff;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.6em;
+}
+
+.products_btn:hover {
+  background-color: black;
+  color: #fff;
+}
+
+.product_bottom {
+  margin: 0 auto;
+}
+
+/* よくある質問 */
+#faq {
+  padding: 100px 0;
+}
+
+.faq_contents {
+  margin: 50px 0;
+}
+
+.faq_title {
+  width: 100%;
+  font-size: 1.6em;
+  padding: 10px;
+  text-align: left;
+  line-height: 2em;
+  background-color: gainsboro;
+}
+
+.faq_text {
+  width: 100%;
+  margin: 10px 0 30px 0;
+  text-align: left;
+}
+
+/* フッター */
+#footer {
+  background-color: gainsboro;
+  width: 100%;
+}
+
+.footer_contents {
+  width: 1024px;
+  display: flex;
+  margin:  0 auto;
+  padding: 30px 0;
+}
+
+.footer_left {
+  padding-left: 50px;
+  width: 50%;
+}
+
+.footer_left h5 {
+  font-size: 20px;
+  font-weight: 100;
+  margin: 10px;
+}
+
+.footer_left p {
+  line-height: 2em;
+}
+
+.footer_right {
+  width: 50%;
+}
+
+.footer_right p {
+  margin: 10px
+}
+
+.footer_right img {
+  width: 400px
+}
