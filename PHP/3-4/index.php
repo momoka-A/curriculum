@@ -12,6 +12,7 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="reset.css">
         <title>第3章チェックテスト</title>
     </head>
     <body>
@@ -38,23 +39,25 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach($posts as $post) {
-                        echo "<tr>";
-                            echo "<td>".$post['id']."</td>";
-                            echo "<td>".$post['title']."</td>";
-                            echo "<td>";
-                                if($post['category_no'] == 1){
-                                    echo '食事';
-                                } else if($post['category_no'] == 2){
-                                    echo '旅行';
-                                } else {
-                                    echo 'その他';
-                                }
-                            echo"</td>";
-                            echo "<td>".$post['comment']."</td>";
-                            echo "<td>".$post['created']."</td>";
-                        echo "</tr>";
-                    } ?>
+                    <?php foreach($posts as $post) { ?>
+                        <tr>
+                            <td><?php echo $post['id']; ?></td>
+                            <td><?php echo $post['title']; ?></td>
+                            <td>
+                                <?php
+                                    if($post['category_no'] == 1){
+                                        echo '食事';
+                                    } else if($post['category_no'] == 2){
+                                        echo '旅行';
+                                    } else {
+                                        echo 'その他';
+                                    }
+                                ?>
+                            </td>
+                            <td><?php echo $post['comment']; ?></td>
+                            <td><?php echo $post['created']; ?></td>
+                        </tr>
+                    <?php } ?>
                 </tbody>
             </table>
        </main>
