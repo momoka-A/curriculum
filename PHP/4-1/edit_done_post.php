@@ -9,23 +9,29 @@
     $title = $_POST['title'];
     $content = $_POST['content'];
 
-    $pdo = db_connect();
+    if(!empty($title) && !empty($content)){
+        $pdo = db_connect();
 
-    try{
-        $sql = "
-            UPDATE posts
-            SET title = :title,
-                content = :content
-            WHERE id = :id
-            ";
-        $stmt = $pdo->prepare($sql);
-        $stmt->bindParam(':title', $title);
-        $stmt->bindParam(':content', $content);
-        $stmt->bindParam(':id', $id);
-        $stmt->execute();
+        try{
+            $sql = "
+                UPDATE posts
+                SET title = :title,
+                    content = :content
+                WHERE id = :id
+                ";
+            $stmt = $pdo->prepare($sql);
+            $stmt->bindParam(':title', $title);
+            $stmt->bindParam(':content', $content);
+            $stmt->bindParam(':id', $id);
+            $stmt->execute();
 
-    } catch(PDOException $e) {
-        exit('データベース接続失敗。' . $e->getMessage());
+        } catch(PDOException $e) {
+            exit('データベース接続失敗。' . $e->getMessage());
+        }
+    } else {
+        $referer = $_SERVER['HTTP_REFERER'];
+        header("Location: $referer");
+        exit;
     }
 ?>
 

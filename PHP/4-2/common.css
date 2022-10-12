@@ -1,0 +1,16 @@
+table, th, td {
+    border-collapse: collapse;
+    border: solid 1px rgb(208, 208, 208);
+}
+
+thead {
+    background-color: #ddd;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
