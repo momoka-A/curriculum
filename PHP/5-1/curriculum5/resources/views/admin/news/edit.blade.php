@@ -1,0 +1,55 @@
+{{-- layouts/admin.blade.phpを読み込む --}}
+@extends('layouts.admin')
+@section('title','ニュースの編集')
+
+@section('content')
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <h2>ニュース編集</h2>
+                <form action="{{ url('admin/news/update') }}" method="post" enctype="multipart/form-data">
+                    @if(count($errors) > 0)
+                        <ul>
+                            @foreach($errors->all() as $e)
+                                <li>{{ $e }}</li>
+                            @endforeach
+                        </ul>
+                    @endif
+                    <div class="mb-3 row">
+                        <label class="col-md-2" for="title">タイトル</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" name="title" value="">
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label class="col-md-2" for="body">本文</label>
+                        <div class="col-md-10">
+                            <textarea class="form-control" name="body" rows="20"></textarea>
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <label class="col-md-2" for="image">画像</label>
+                        <div class="col-md-10">
+                            <input type="file" class="form-control-file" name="image">
+                            <div class="form-text text-info">
+                                設定中：
+                            </div>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" name="remove" value="true">画像を削除
+                            </label>
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <div class="col-md-10">
+                            <input type="hidden" name="id" value="">
+                            {{ csrf_field() }}
+                            <input type="submit" class="btn btn-primary" value="更新">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+@endsection

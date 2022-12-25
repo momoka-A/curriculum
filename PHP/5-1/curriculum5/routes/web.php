@@ -19,6 +19,10 @@ Route::get('/', function () {
 });
 
 Route::get('/admin/news/create', [NewsController::class, 'add']);
+Route::post('/admin/news/create', [NewsController::class, 'create']);
+Route::get('/admin/news', [NewsController::class, 'index']);
+Route::get('/admin/news/edit', [NewsController::class, 'edit']);
+Route::post('/admin/news', [NewsController::class, 'update']);
 
 Route::middleware([
     'auth:sanctum',
