@@ -46,7 +46,7 @@
                                 <td>{{ Str::limit($news->body, 250) }}</td>
                                 <td>
                                     <div>
-                                    <a href="{{ url('admin/news/edit' }}">編集</a>
+                                    <a href="{{ url('admin/news/edit') }}">編集</a>
                                     </div>
                                 </td>
                             </tr>
