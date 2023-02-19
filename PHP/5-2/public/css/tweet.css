@@ -1,0 +1,40 @@
+body {
+    background-repeat: no-repeat;
+    background-position: center;
+    color: black;
+  }
+
+.navbar-mutter {
+    background-color: #fff !important;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075) !important;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.navbar-brand{
+    color: black !important;
+}
+
+.container {
+    width: 50%;
+    background-color: #fff;
+    padding: 0;
+}
+.home {
+    padding: 2%;
+    border-bottom: none !important;
+}
+.textbox-area {
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.btn-area{
+    margin: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+.side{
+    display: flex;
+    justify-content: space-between;
+}
